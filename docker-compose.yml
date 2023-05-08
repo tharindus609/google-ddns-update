@@ -5,7 +5,7 @@ services:
     container_name: gddns-updater
     image: tharindus6092/gddns-updater
     build:
-      context: https://gitlab.com/python-base/google-ddns-updater.git#dev
+      context: https://github.com/tharindus609/google-ddns-update.git#dev
     environment:
       USERNAME: <api_username>
       PASSWORD: <api_password>
