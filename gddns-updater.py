@@ -14,11 +14,12 @@ UPDATE_INTERVAL = 900 # 15 mins
 
 while True:
     DDNS_UPDATE_REQUIRED = False
+    q_domain = "query.{0}".format(g_domain)
 
-    print("querying current DDNS IP")
+    print("querying current DDNS IP: {0}".format(q_domain))
 
     try:
-        sock_host = socket.gethostbyaddr(g_domain)
+        sock_host = socket.gethostbyaddr(q_domain)
 
         print("current DNS information")
         print("hostnames: {0}".format(sock_host[0]))
